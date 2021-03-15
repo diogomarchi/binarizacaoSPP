@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11e MIXED_VERSIONS
 13
 !s112 1.1
 !i10d 8192
@@ -9,141 +10,192 @@ z2
 cModel Technology
 Z0 dC:/Users/User/Desktop/univali/TEE/binarizacaoSPP
 Erom
-Z1 w1615755742
-Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-R0
-Z5 8ROM.vhd
-Z6 FROM.vhd
+Z1 w1615764474
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+Z5 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+Z8 dD:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/binarizacaoSPP
+Z9 8ROM.vhd
+Z10 FROM.vhd
 l0
-L27
-V5i`G5C<;Pn`Ga73;aM04l3
-!s100 n0fe0BO[2H4eBcc8m6?C>2
-Z7 OV;C;10.5b;63
+L15 1
+V8234=?<>K0Dm@@BYR6]0k0
+!s100 a=h:D22@T>X[I4_X4F6l30
+Z11 OV;C;2020.1;71
 32
-Z8 !s110 1615760541
+Z12 !s110 1615765777
 !i10b 1
-Z9 !s108 1615760541.000000
-Z10 !s90 -reportprogress|300|ROM.vhd|rom_2.vhd|rom_template.vhd|tb_rom.vhd|
-Z11 !s107 tb_rom.vhd|rom_template.vhd|rom_2.vhd|ROM.vhd|
+Z13 !s108 1615765776.000000
+Z14 !s90 -reportprogress|300|ROM.vhd|rom_template.vhd|rom_teste.vhd|tb_rom.vhd|
+!s107 tb_rom.vhd|rom_teste.vhd|rom_template.vhd|ROM.vhd|
 !i113 1
-Z12 tExplicit 1 CvgOpt 0
-Aarch
+Z15 tExplicit 1 CvgOpt 0
+Artl
 R2
 R3
 R4
-Z13 DEx4 work 3 rom 0 22 5i`G5C<;Pn`Ga73;aM04l3
+R5
+R6
+R7
+Z16 DEx4 work 3 rom 0 22 8234=?<>K0Dm@@BYR6]0k0
+!i122 0
+l50
+L26 29
+VQ]zFnTjbVSemPDK>YcYL:2
+!s100 Z7N:709glXglX>P2S1g;V0
+R11
+32
+R12
+!i10b 1
+R13
+R14
+Z17 !s107 tb_rom.vhd|rom_teste.vhd|rom_template.vhd|ROM.vhd|
+!i113 1
+R15
+Aarch
+Z18 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R6
+Z19 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+DEx4 work 3 rom 0 22 5i`G5C<;Pn`Ga73;aM04l3
 l61
 L39
-Z14 VDBB?3oCU5=Kbh@B95[M`U1
-Z15 !s100 06k16DEUaC:Y0SU`==hP62
-R7
+VDBB?3oCU5=Kbh@B95[M`U1
+!s100 06k16DEUaC:Y0SU`==hP62
+Z20 OV;C;10.5b;63
 32
-R8
+Z21 !s110 1615760541
 !i10b 1
-R9
-R10
-R11
+Z22 !s108 1615760541.000000
+Z23 !s90 -reportprogress|300|ROM.vhd|rom_2.vhd|rom_template.vhd|tb_rom.vhd|
+Z24 !s107 tb_rom.vhd|rom_template.vhd|rom_2.vhd|ROM.vhd|
 !i113 1
-R12
-Artl
-DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
-R2
-R3
-R4
-DEx4 work 3 rom 0 22 8234=?<>K0Dm@@BYR6]0k0
-l50
-L26
-VYCm1ZOoX;mz2hh:QmnV7i3
-!s100 J3nV60Y>NkkNO57mGUIR[1
-R7
-32
-!s110 1615754428
-!i10b 1
-!s108 1615754428.000000
-!s90 -reportprogress|300|ROM.vhd|tb_rom.vhd|
-!s107 tb_rom.vhd|ROM.vhd|
-!i113 1
-R12
-w1615753130
-Erom_template
-Z16 w1615758359
-Z17 DPx9 altera_mf 20 altera_mf_components 0 22 Sn8Ol<dGSW99iM6NfOU>g1
-R3
-R4
+R15
 R0
-Z18 8rom_template.vhd
-Z19 From_template.vhd
+w1615755742
+Erom_template
+R1
+Z25 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+R6
+R7
+!i122 0
+R8
+Z26 8rom_template.vhd
+Z27 From_template.vhd
 l0
-L42
+L42 1
 VaN92]W]Eza5N_;H@^g`ME1
 !s100 l6eLHD[6]VFJ<agM9QGP40
-R7
-32
-R8
-!i10b 1
-R9
-R10
 R11
-!i113 1
+32
 R12
-Asyn
+!i10b 1
+R13
+R14
 R17
-R3
-R4
-Z20 DEx4 work 12 rom_template 0 22 aN92]W]Eza5N_;H@^g`ME1
-l58
-L54
-Z21 V:AONnBiFTM`^1A8YTED391
-Z22 !s100 eLPCVno6Z7G8lHS<J30jl1
-R7
-32
-R8
-!i10b 1
-R9
-R10
-R11
 !i113 1
+R15
+Asyn
+R25
+R6
+R7
+Z28 DEx4 work 12 rom_template 0 22 aN92]W]Eza5N_;H@^g`ME1
+!i122 0
+l58
+L54 34
+Z29 V:AONnBiFTM`^1A8YTED391
+Z30 !s100 eLPCVno6Z7G8lHS<J30jl1
+R11
+32
 R12
-Etb_rom
-Z23 w1615760473
-R2
-R3
-R4
-R0
-Z24 8tb_rom.vhd
-Z25 Ftb_rom.vhd
+!i10b 1
+R13
+R14
+R17
+!i113 1
+R15
+Erom_teste
+Z31 w1615764955
+R25
+R6
+R7
+!i122 0
+R8
+Z32 8rom_teste.vhd
+Z33 From_teste.vhd
 l0
-L8
+L43 1
+VnRh]BQ0J<C@=l=WGZLoji1
+!s100 zjYY[Ai:7LCT:[2PJSYSg2
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R17
+!i113 1
+R15
+Asyn
+R25
+R6
+R7
+DEx4 work 9 rom_teste 0 22 nRh]BQ0J<C@=l=WGZLoji1
+!i122 0
+l60
+L56 35
+VZ66CjQ;>PXKShRaXSfmS]3
+!s100 gaHXGZN9J^0Ef?^LAnXWk3
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R17
+!i113 1
+R15
+Etb_rom
+R1
+R5
+R6
+R7
+!i122 0
+R8
+Z34 8tb_rom.vhd
+Z35 Ftb_rom.vhd
+l0
+L8 1
 V1lCkgj0m[TMG]BOJKJAcF1
 !s100 Q?hYmfL4aKZJ@nlM50]RP2
-R7
-32
-R8
-!i10b 1
-R9
-R10
 R11
-!i113 1
+32
 R12
+!i10b 1
+R13
+R14
+R17
+!i113 1
+R15
 Aarch
-R2
-R3
-R4
-Z26 DEx4 work 6 tb_rom 0 22 1lCkgj0m[TMG]BOJKJAcF1
-l35
-L11
-Z27 V@d8gJf7XKKEGTj<5@bWE13
-Z28 !s100 `Z6XMz<V7SndWWn3?k=6O3
+R5
+R6
 R7
-32
-R8
-!i10b 1
-R9
-R10
+Z36 DEx4 work 6 tb_rom 0 22 1lCkgj0m[TMG]BOJKJAcF1
+!i122 0
+l35
+L11 66
+Z37 V@d8gJf7XKKEGTj<5@bWE13
+Z38 !s100 `Z6XMz<V7SndWWn3?k=6O3
 R11
-!i113 1
+32
 R12
+!i10b 1
+R13
+R14
+R17
+!i113 1
+R15

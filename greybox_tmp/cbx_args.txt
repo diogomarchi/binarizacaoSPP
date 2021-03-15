@@ -15,4 +15,5 @@ aclr0
 address_a
 clock0
 clocken0
+rden_a
 q_a
