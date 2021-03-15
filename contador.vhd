@@ -13,9 +13,9 @@ USE ieee.STD_LOGIC_UNSIGNED.ALL;
 ENTITY contador IS
   PORT (
     i_CLR : IN std_logic; -- clear/reset
-    i_CLK    : IN std_logic; -- clock
-    i_INC : IN std_logic; -- enable 		 
-    o_CONT     : OUT std_logic_vector(11 DOWNTO 0) -- data output
+    i_CLK : IN std_logic; -- clock
+    i_ENA : IN std_logic; -- enable 		 
+    o_CONT : OUT std_logic_vector(11 DOWNTO 0) -- data output
   );
 END contador;
 ARCHITECTURE rtl OF contador IS
@@ -24,12 +24,12 @@ ARCHITECTURE rtl OF contador IS
 
 BEGIN
 
-  PROCESS (i_CLR, i_CLK, i_INC)
+  PROCESS (i_CLR, i_CLK)
   BEGIN
     IF (i_CLR = '1') THEN
       w_COUNTER <= "000000000000";
     ELSIF (rising_edge(i_CLK)) THEN
-      IF (i_INC = '1') THEN
+      IF (i_ENA = '1') THEN
         w_COUNTER <= w_COUNTER + "1";
       END IF;
     END IF;

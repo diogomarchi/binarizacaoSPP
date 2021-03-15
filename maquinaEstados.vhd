@@ -26,23 +26,47 @@ ENTITY maquinaEstados IS
 END maquinaEstados;
 
 ARCHITECTURE rtl OF maquinaEstados IS
-  -- s_INIT inicio
-  -- s_finish finaliza ou nao
-  -- s_LOAD pega valor no endereço
-  -- s_VERIFY verfica se é maior que 128
-  -- s_STORE0 armazena 0
-  -- s_STORE1 armazena 1
-  -- s_STORE_RAM escreve o valor na ram e incrementa contador
-  -- s_READY sinaliza que terminou
+  -- s_INIT     
+  -- s_INIT deve zerar o contador de endereco e aguardar sinal de GO
+  
+  
+  -- s_VERIFY_ADDR 
+  -- s_VERIFY_ADDR deve verificar se o endereco é maior/menor que ALGUM VALOR (GENÉRICO)
+  -- SE FOR MENOR VAI PARA s_LOAD
+  -- SE FOR MAIOR VAI PARA s_FINISH
+  
+  -- s_LOAD 
+  -- s_LOAD deve sinalizar leitura ROM e fornecer endereco de leitura
+  
+  -- s_VERIFY_PIXEL
+  -- s_VERIFY_PIXEL deve verificar um sinal de entrada que indique se o valor é maior ou menor 
+  -- SE FOR MENOR VAI PARA s_STORE0
+  -- SE FOR MAIOR VAI PARA s_STORE1
+  
+  -- s_STORE0 
+  -- s_STORE0 deve sinalizar escrita na RAM, sinalizar que o valor é 0 e fornecer endereco de escrita  
+  
+  -- s_STORE1 
+  -- s_STORE1 deve sinalizar escrita na RAM, sinalizar que o valor é 1 e fornecer endereco de escrita  
+  
+  -- s_INC_ADDR
+  -- s_INC_ADDR deve habilitar contador de endereco
+  -- retornar para s_VERIFY_ADDR
+  
+ 
+  -- s_FINISH 
+  -- s_FINISH deve sinalizar conclusão da operação
+  -- retornar para s_INIT
+  
 
-
+	
   TYPE t_STATE IS (s_INIT, s_FINISH, s_LOAD, s_VERIFY, s_STORE0, s_STORE1, s_STORE_RAM, s_READY);
   SIGNAL r_STATE : t_STATE; -- state register
   SIGNAL w_NEXT : t_STATE; -- next state  
 
 BEGIN
 
-  p_STATE : PROCESS (i_CLK, i_CLR_n, i_MAIOR128, i_MAIOR4096)
+  p_STATE : PROCESS (i_CLK, i_CLR_n)
   BEGIN
     IF (i_CLR_n = '0') THEN
       r_STATE <= s_INIT; --initial state
@@ -51,7 +75,7 @@ BEGIN
     END IF;
   END PROCESS;
   
-  p_NEXT : PROCESS (r_STATE, i_MAIOR128)
+  p_NEXT : PROCESS (r_STATE)
   BEGIN
     CASE (r_STATE) IS
       WHEN s_INIT =>
