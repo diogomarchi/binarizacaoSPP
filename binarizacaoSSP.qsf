@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE Auto
-set_global_assignment -name TOP_LEVEL_ENTITY comparador
+set_global_assignment -name TOP_LEVEL_ENTITY bloco_controle
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:56:54  MARCH 11, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -59,6 +59,7 @@ set_global_assignment -name VHDL_FILE contador.vhd
 set_global_assignment -name VHDL_FILE maquinaEstados.vhd
 set_global_assignment -name VHDL_FILE registrador8bit.vhd
 set_global_assignment -name VHDL_FILE comparador.vhd
+set_global_assignment -name VHDL_FILE bloco_controle.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

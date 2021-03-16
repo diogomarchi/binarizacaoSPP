@@ -14,7 +14,7 @@ ENTITY maquinaEstados IS
   PORT (
     i_CLK   : IN std_logic; -- input clock
     i_CLR_n : IN std_logic; -- input clear/reset
-	 i_ADDR  : IN std_logic_vector(12 downto 0); --input addres
+		 i_ADDR  : IN std_logic_vector(12 downto 0); --input addres
     i_MAIOR_PIXEL  : IN std_logic; -- input larger or less that 128
 	 o_CLR_CONT     : out std_logic; --output clear
     o_ADDR         : OUT std_logic_vector(12 downto 0); -- output addr
