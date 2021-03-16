@@ -33,6 +33,6 @@ BEGIN
     END IF;
   END PROCESS;
 
-  o_Q <= saida 
+  o_Q <= saida;
 
 END arch1;
