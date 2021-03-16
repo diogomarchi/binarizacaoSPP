@@ -43,7 +43,7 @@ ENTITY rom_template IS
 	PORT
 	(
 		aclr		: IN STD_LOGIC  := '0';
-		address		: IN STD_LOGIC_VECTOR (11 DOWNTO 0);
+		address  : IN STD_LOGIC_VECTOR (11 DOWNTO 0);
 		clken		: IN STD_LOGIC  := '1';
 		clock		: IN STD_LOGIC  := '1';
 		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)

@@ -12,8 +12,8 @@ use ieee.STD_LOGIC_UNSIGNED.all;
 
 entity comparador is
 port ( 
-       i_VALOR : in  std_logic_vector(7 downto 0);  -- selector	 
-       o_Q     : out  std_logic -- data output
+  i_VALOR : in  std_logic_vector(7 downto 0);  -- selector	 
+  o_Q     : out  std_logic -- data output
 ); 
 end comparador;
 

@@ -12,14 +12,13 @@ use ieee.STD_LOGIC_UNSIGNED.all;
 
 ENTITY maquinaEstados IS
   PORT (
-    i_CLK   : IN std_logic; -- input clock
-    i_CLR_n : IN std_logic; -- input clear/reset
-		 i_ADDR  : IN std_logic_vector(12 downto 0); --input addres
-    i_MAIOR_PIXEL  : IN std_logic; -- input larger or less that 128
+    i_CLK          : IN std_logic; -- input clock
+    i_CLR_n        : IN std_logic; -- input clear/reset
+	 i_CONTINUE     : IN std_logic; --input addres
 	 o_CLR_CONT     : out std_logic; --output clear
-    o_ADDR         : OUT std_logic_vector(12 downto 0); -- output addr
 	 o_READY        : OUT STD_LOGIC; -- output larger or less that 4096
 	 o_INC_CONT     : out std_logic; --output inc contador
+	 o_R_EN_ROM     : OUT std_logic; -- output read enable in rom memory
     o_WR_EN_RAM    : OUT std_logic -- output write enable in ram memory
   );
 END maquinaEstados;
@@ -42,11 +41,9 @@ ARCHITECTURE rtl OF maquinaEstados IS
   -- SE FOR MENOR VAI PARA s_STORE0
   -- SE FOR MAIOR VAI PARA s_STORE1
   
-  -- s_STORE0 
-  -- s_STORE0 deve sinalizar escrita na RAM, sinalizar que o valor é 0 e fornecer endereco de escrita  
+  -- s_STORE 
+  -- s_STORE deve sinalizar escrita na RAM, sinalizar que o valor é 0 e fornecer endereco de escrita  
   
-  -- s_STORE1 
-  -- s_STORE1 deve sinalizar escrita na RAM, sinalizar que o valor é 1 e fornecer endereco de escrita  
   
   -- s_INC_ADDR
   -- s_INC_ADDR deve habilitar contador de endereco
@@ -59,7 +56,7 @@ ARCHITECTURE rtl OF maquinaEstados IS
   
 
 	
-  TYPE t_STATE IS (s_INIT, s_VERIFY_ADDR, s_LOAD, s_VERIFY_PIXEL, s_STORE0, s_STORE1, s_INC_ADDR, s_FINISH);
+  TYPE t_STATE IS (s_INIT, s_VERIFY_ADDR, s_LOAD, s_VERIFY_PIXEL, s_STORE, s_INC_ADDR, s_FINISH);
   SIGNAL r_STATE : t_STATE; -- state register
   SIGNAL w_NEXT : t_STATE; -- next state  
 
@@ -81,7 +78,7 @@ BEGIN
         w_NEXT <= s_VERIFY_ADDR; --vai para o proximo passando clear em 1  
 
       WHEN s_VERIFY_ADDR =>
-        if(i_ADDR < "1000000000000") then
+        if(i_CONTINUE = '1') then
 		    w_NEXT <= s_LOAD;
 		  else 
 		    w_NEXT <= s_FINISH;
@@ -91,16 +88,9 @@ BEGIN
         w_NEXT <= s_VERIFY_PIXEL;
 		  
 		when s_VERIFY_PIXEL =>
-		  if(i_MAIOR_PIXEL = '1') then
-		    w_NEXT <= s_STORE1;
-		  else
-		    w_NEXT <= s_STORE0;
-		  end if;
+		    w_NEXT <= s_STORE;
 		
-		when s_STORE0 =>
-		  w_NEXT <= s_INC_ADDR;
-		  
-		when s_STORE1 =>
+		when s_STORE =>
 		  w_NEXT <= s_INC_ADDR;
 		  
 		when s_INC_ADDR =>
@@ -116,16 +106,16 @@ BEGIN
 
 
 
-  --atribuição do valor de constante
-  
-  o_ADDR         <= i_ADDR when(r_STATE = s_LOAD) else "0000000000000";     
+  --atribuição do valor de constante 
   
   o_READY        <= '1' WHEN (r_STATE = s_FINISH) else '0';
   
-  o_WR_EN_RAM    <= '1' when((r_STATE = s_STORE0) OR (r_STATE = s_STORE1)) else '0';
+  o_WR_EN_RAM    <= '1' when(r_STATE = s_STORE) else '0';
 
   o_CLR_CONT     <= '1' WHEN (r_STATE = s_INIT) ELSE '0';
   
   o_INC_CONT     <= '1' when (r_STATE = s_INC_ADDR) else '0';
+  
+  o_R_EN_ROM     <= '1' when (r_STATE = s_LOAD) else '0';
   
 END rtl;

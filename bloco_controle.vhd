@@ -1,6 +1,6 @@
 ------------------------------------------------
 -- Design: bloco de controle
--- Entity: mdc_control 
+-- Entity: bloco_controle
 -- Author: Diogo & George
 -- Rev.  : 1.0
 -- Date  : 03/15/2020
@@ -14,8 +14,9 @@ ENTITY bloco_controle IS
 	PORT (
 	  i_CLK   		: IN std_logic; -- input clock
      i_CLR_n 		: IN std_logic; -- input clear/reset
-	  i_MAIOR_PIXEL  : IN std_logic; -- input larger or less that 128
+	  i_MAIOR_PIXEL: IN std_logic; -- input larger or less that 128
      o_WR_EN_RAM  : OUT std_logic; -- output write enable in ram memory
+	  o_R_EN_ROM   : OUT std_logic; -- output read enable in rom memory
 	  o_ADDR       : OUT std_logic_vector(12 downto 0); -- output addr
 	  o_READY      : OUT STD_LOGIC -- output larger or less that 4096
 	);
@@ -25,15 +26,16 @@ ARCHITECTURE rtl OF bloco_controle IS
 
   component maquinaEstados IS
   PORT (
-    i_CLK          : IN std_logic; -- input clock
-    i_CLR_n        : IN std_logic; -- input clear/reset
+    i_CLK          : IN std_logic;  -- input clock
+    i_CLR_n        : IN std_logic;  -- input clear/reset
 	 i_ADDR         : IN std_logic_vector(12 downto 0); --input addres
-    i_MAIOR_PIXEL  : IN std_logic; -- input larger or less that 128
+    i_MAIOR_PIXEL  : IN std_logic;  -- input larger or less that 128
 	 o_CLR_CONT     : out std_logic; --output clear
     o_ADDR         : OUT std_logic_vector(12 downto 0); -- output addr
 	 o_READY        : OUT STD_LOGIC; -- output larger or less that 4096
 	 o_INC_CONT     : out std_logic; --output inc contador
-    o_WR_EN_RAM    : OUT std_logic -- output write enable in ram memory
+	 o_R_EN_ROM     : OUT std_logic; -- output read enable in rom memory
+    o_WR_EN_RAM    : OUT std_logic  -- output write enable in ram memory
   );
   END component;
 
@@ -68,6 +70,7 @@ BEGIN
 	  o_ADDR        => o_ADDR,
 	  o_READY       => o_READY,
      o_INC_CONT    => w_o_ME_INC_CONT,
+	  o_R_EN_ROM    => o_R_EN_ROM,
 	  o_WR_EN_RAM   => o_WR_EN_RAM
 	);
 
