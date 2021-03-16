@@ -18,7 +18,9 @@ PORT (
   i_CLR_CONT    : IN std_logic;                     -- clear contador
   i_DATA        : IN std_logic_vector(7 downto 0);  -- data input
   i_R_EN_ROM    : IN std_logic;                     -- input read enable in rom memory
-  i_EN_WR_RAM   : IN std_logic;                     -- data input   
+  i_EN_WR_RAM   : IN std_logic;                     -- data input 
+  o_CONTINUE    : OUT std_logic;                    -- data output continue
+  o_R_EN_ROM    : OUT std_logic;                    -- output read enable in rom memory  
   o_VALOR_WR_RAM: OUT std_logic_Vector(7 DOWNTO 0); -- data output
   o_ADDR        : OUT std_logic_vector(12 downto 0);-- data output
   o_WR_EN_RAM   : OUT std_logic                     -- output write enable ram 
@@ -56,7 +58,7 @@ ARCHITECTURE rtl OF bloco_operacional IS
   );
   END component;
 
-  signal w_o_REGISTER, w_i_A_REGISTER : std_logic_vector(7 downto 0);
+  signal w_o_REGISTER : std_logic_vector(7 downto 0);
   signal w_o_C_CONT : std_logic_vector(12 downto 0);
   signal w_o_COMPARE, w_o_REG_1_bit : std_logic;
 	
@@ -71,7 +73,7 @@ BEGIN
 	
 	u_multiplexador : multiplexador port map(
 	  i_COMPARE => w_o_REG_1_bit,
-	  o_Q       => w_i_A_REGISTER
+	  o_Q       => o_VALOR_WR_RAM
 	);
 	
 	u_comparador : comparador port map(
@@ -89,6 +91,7 @@ BEGIN
 	
 	o_ADDR      <= w_o_C_CONT;
 	o_WR_EN_RAM <= i_EN_WR_RAM;
-	o_VALOR_WR_RAM <= w_i_A_REGISTER;
+	o_R_EN_ROM  <= i_R_EN_ROM;
+	o_CONTINUE  <= w_o_C_CONT(12);
 
 END rtl;
