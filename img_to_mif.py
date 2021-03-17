@@ -35,9 +35,11 @@ im = cv.imread("placa_64x64.jpg")
 
 gray = cv.cvtColor(im, cv.COLOR_BGR2GRAY)
 
+ret,thresh1 = cv.threshold(img,127,255,cv.THRESH_BINARY)
+
 
 index = 0
-with open("out_memory_file.mif", "w") as mif:
+with open("image.mif", "w") as mif:
     
     mif.writelines(cabecalho())
 
@@ -46,9 +48,9 @@ with open("out_memory_file.mif", "w") as mif:
             bin_value = bin(pixel).replace("0b", "")
             bin_value = bin_value.zfill(WIDTH)           
                         
-            mif.writelines(str(DEPTH - index) + ": " + bin_value + "; \n")
+            mif.writelines(str(DEPTH - index - 1) + ": " + bin_value + "; \n")
            
-            print(DEPTH - index, ": ", bin_value)
+            print(DEPTH - index - 1, ": ", bin_value)
             index += 1
     
     

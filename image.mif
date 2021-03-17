@@ -3,7 +3,6 @@
 -- end_signature
 WIDTH=8;
 DEPTH=4096;
-
 ADDRESS_RADIX=UNS;
 DATA_RADIX=BIN;
 

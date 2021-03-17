@@ -3,7 +3,7 @@
 -- Entity: bloco_operacional
 -- Author: Diogo & George
 -- Rev.  : 1.0
--- Date  : 03/16/2020
+-- Date  : 03/16/2021
 ------------------------------------------------
 
 LIBRARY ieee;
@@ -19,10 +19,10 @@ PORT (
   i_DATA        : IN std_logic_vector(7 downto 0);  -- data input
   i_R_EN_ROM    : IN std_logic;                     -- input read enable in rom memory
   i_EN_WR_RAM   : IN std_logic;                     -- data input 
-  o_CONTINUE    : OUT std_logic;                    -- data output continue
+  o_CONTINUE_n  : OUT std_logic;                    -- data output continue
   o_R_EN_ROM    : OUT std_logic;                    -- output read enable in rom memory  
   o_VALOR_WR_RAM: OUT std_logic_Vector(7 DOWNTO 0); -- data output
-  o_ADDR        : OUT std_logic_vector(12 downto 0);-- data output
+  o_ADDR        : OUT std_logic_vector(11 downto 0);-- data output
   o_WR_EN_RAM   : OUT std_logic                     -- output write enable ram 
 );
 END bloco_operacional;
@@ -45,7 +45,9 @@ ARCHITECTURE rtl OF bloco_operacional IS
   
   component multiplexador is
   port ( 
-    i_COMPARE : in  std_logic;                      -- selector
+    i_SEL  : in  std_logic;                     -- selector
+	 i_A	  : in  std_logic_Vector(7 downto 0);  -- data A
+    i_B	  : in  std_logic_Vector(7 downto 0);  -- data B
     o_Q       : out  std_logic_Vector(7 downto 0)); -- data output
   end component;
   
@@ -72,7 +74,9 @@ BEGIN
 	);
 	
 	u_multiplexador : multiplexador port map(
-	  i_COMPARE => w_o_REG_1_bit,
+	  i_SEL     => w_o_REG_1_bit,
+	  i_A       => "00000000",
+	  i_B       => "11111111",
 	  o_Q       => o_VALOR_WR_RAM
 	);
 	
@@ -89,9 +93,9 @@ BEGIN
 	  o_CONT => w_o_C_CONT	
 	);
 	
-	o_ADDR      <= w_o_C_CONT;
+	o_ADDR      <= w_o_C_CONT(11 downto 0);
 	o_WR_EN_RAM <= i_EN_WR_RAM;
 	o_R_EN_ROM  <= i_R_EN_ROM;
-	o_CONTINUE  <= w_o_C_CONT(12);
+	o_CONTINUE_n<= w_o_C_CONT(12);
 
 END rtl;

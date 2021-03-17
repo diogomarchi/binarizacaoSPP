@@ -1,0 +1,10 @@
+RAM_inst : RAM PORT MAP (
+		aclr	 => aclr_sig,
+		address	 => address_sig,
+		clken	 => clken_sig,
+		clock	 => clock_sig,
+		data	 => data_sig,
+		rden	 => rden_sig,
+		wren	 => wren_sig,
+		q	 => q_sig
+	);

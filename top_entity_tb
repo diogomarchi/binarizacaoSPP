@@ -1,0 +1,65 @@
+-- top_entity_tb
+-- sistema binarizador
+-- Autores: Diogo e George
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity top_entity_tb is
+end entity;
+
+architecture arch of top_entity_tb is
+
+  component top_entity IS
+	PORT (
+	  i_CLK          : IN std_logic;
+	  i_CLR_N        : IN std_logic;
+	  i_GO           : IN std_logic; -- go signal to start processing
+	  o_READY        : OUT STD_LOGIC -- ready signal to sinalize ending
+	);
+  end component;  
+
+
+  signal w_CLR_n, w_CLK, w_GO, w_READY : std_logic;
+
+  constant c_CLK_period : time := 2 ns;
+
+begin
+
+    --Instantiate the Device Under Test (DUT)
+  DUT : top_entity
+  port map(
+	i_CLK    => w_CLK,
+	i_CLR_N  => w_CLR_n,
+	i_GO     => w_GO,
+	o_READY  => w_READY);
+	
+  
+   p_CLK: process
+  begin
+    w_CLK <= '1';
+    wait for c_CLK_PERIOD/2;  
+    w_CLK <= '0';
+    wait for c_CLK_PERIOD/2;  
+  end process p_CLK;
+
+
+  p_TEST : process
+  begin
+
+  w_CLR_n <= '0'; -- clear 
+  wait for 2*c_CLK_PERIOD;
+  w_CLR_n <= '1';       
+
+  w_GO <= '1'; -- sinaliza inicio
+  
+  wait until w_READY = '1';
+
+  -- TEST DONE
+  assert false report "Test done." severity note;
+  wait;
+
+  end process p_TEST;
+
+end;

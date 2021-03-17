@@ -9,193 +9,520 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/User/Desktop/univali/TEE/binarizacaoSPP
-Erom
-Z1 w1615764474
+Ebloco_controle
+Z1 w1615933193
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z4 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
-Z5 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 0
-Z8 dD:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/binarizacaoSPP
-Z9 8ROM.vhd
-Z10 FROM.vhd
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8bloco_controle.vhd
+Z7 Fbloco_controle.vhd
 l0
-L15 1
-V8234=?<>K0Dm@@BYR6]0k0
-!s100 a=h:D22@T>X[I4_X4F6l30
-Z11 OV;C;2020.1;71
+L13
+VXb?Q07JN@OJh:27D^AMW40
+!s100 QBiKXBk;]V6>XALI^g0;D2
+Z8 OV;C;10.5b;63
 32
-Z12 !s110 1615765777
+Z9 !s110 1615941567
 !i10b 1
-Z13 !s108 1615765776.000000
-Z14 !s90 -reportprogress|300|ROM.vhd|rom_template.vhd|rom_teste.vhd|tb_rom.vhd|
-!s107 tb_rom.vhd|rom_teste.vhd|rom_template.vhd|ROM.vhd|
+Z10 !s108 1615941567.000000
+Z11 !s90 -reportprogress|300|RAM.vhd|ROM.vhd|bloco_controle.vhd|bloco_operacional.vhd|comparador.vhd|contador.vhd|maquinaEstados.vhd|multiplexador.vhd|registrador1bit.vhd|registrador8bit.vhd|tb_rom.vhd|top_entity.vhd|
+Z12 !s107 top_entity.vhd|tb_rom.vhd|registrador8bit.vhd|registrador1bit.vhd|multiplexador.vhd|maquinaEstados.vhd|contador.vhd|comparador.vhd|bloco_operacional.vhd|bloco_controle.vhd|ROM.vhd|RAM.vhd|
 !i113 1
-Z15 tExplicit 1 CvgOpt 0
+Z13 tExplicit 1 CvgOpt 0
 Artl
 R2
 R3
 R4
 R5
-R6
-R7
-Z16 DEx4 work 3 rom 0 22 8234=?<>K0Dm@@BYR6]0k0
-!i122 0
-l50
-L26 29
-VQ]zFnTjbVSemPDK>YcYL:2
-!s100 Z7N:709glXglX>P2S1g;V0
-R11
-32
-R12
-!i10b 1
-R13
-R14
-Z17 !s107 tb_rom.vhd|rom_teste.vhd|rom_template.vhd|ROM.vhd|
-!i113 1
-R15
-Aarch
-Z18 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-R6
-Z19 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-DEx4 work 3 rom 0 22 5i`G5C<;Pn`Ga73;aM04l3
-l61
-L39
-VDBB?3oCU5=Kbh@B95[M`U1
-!s100 06k16DEUaC:Y0SU`==hP62
-Z20 OV;C;10.5b;63
-32
-Z21 !s110 1615760541
-!i10b 1
-Z22 !s108 1615760541.000000
-Z23 !s90 -reportprogress|300|ROM.vhd|rom_2.vhd|rom_template.vhd|tb_rom.vhd|
-Z24 !s107 tb_rom.vhd|rom_template.vhd|rom_2.vhd|ROM.vhd|
-!i113 1
-R15
-R0
-w1615755742
-Erom_template
-R1
-Z25 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
-R6
-R7
-!i122 0
+DEx4 work 14 bloco_controle 0 22 Xb?Q07JN@OJh:27D^AMW40
+l54
+L25
+VmH^1h7Od>=NJI?U6l_QTz1
+!s100 K``a@S8W_DzI6i:KDhL252
 R8
-Z26 8rom_template.vhd
-Z27 From_template.vhd
-l0
-L42 1
-VaN92]W]Eza5N_;H@^g`ME1
-!s100 l6eLHD[6]VFJ<agM9QGP40
-R11
 32
-R12
+R9
 !i10b 1
-R13
-R14
-R17
-!i113 1
-R15
-Asyn
-R25
-R6
-R7
-Z28 DEx4 work 12 rom_template 0 22 aN92]W]Eza5N_;H@^g`ME1
-!i122 0
-l58
-L54 34
-Z29 V:AONnBiFTM`^1A8YTED391
-Z30 !s100 eLPCVno6Z7G8lHS<J30jl1
+R10
 R11
-32
 R12
-!i10b 1
-R13
-R14
-R17
 !i113 1
-R15
-Erom_teste
-Z31 w1615764955
-R25
-R6
-R7
-!i122 0
-R8
-Z32 8rom_teste.vhd
-Z33 From_teste.vhd
-l0
-L43 1
-VnRh]BQ0J<C@=l=WGZLoji1
-!s100 zjYY[Ai:7LCT:[2PJSYSg2
-R11
-32
-R12
-!i10b 1
 R13
-R14
-R17
-!i113 1
-R15
-Asyn
-R25
-R6
-R7
-DEx4 work 9 rom_teste 0 22 nRh]BQ0J<C@=l=WGZLoji1
-!i122 0
-l60
-L56 35
-VZ66CjQ;>PXKShRaXSfmS]3
-!s100 gaHXGZN9J^0Ef?^LAnXWk3
-R11
-32
-R12
-!i10b 1
-R13
-R14
-R17
-!i113 1
-R15
-Etb_rom
-R1
+Ebloco_operacional
+Z14 w1615940573
+R2
+R3
+R4
 R5
-R6
-R7
-!i122 0
-R8
-Z34 8tb_rom.vhd
-Z35 Ftb_rom.vhd
+R0
+Z15 8bloco_operacional.vhd
+Z16 Fbloco_operacional.vhd
 l0
-L8 1
+L13
+V1KlEd3PjAD6^ZiiB=@5lP3
+!s100 HnAM@SK73H6eg^SVbOm5d2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 17 bloco_operacional 0 22 1KlEd3PjAD6^ZiiB=@5lP3
+l67
+L30
+V[TPJ>zFA2ZR;N4YzkNPj;0
+!s100 oczfBM@SE[8l0i`O?A^:i3
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Ecomparador
+R1
+R2
+R3
+R4
+R5
+R0
+Z17 8comparador.vhd
+Z18 Fcomparador.vhd
+l0
+L13
+VW5Gl0GYV7HkAk_Vo_i?U60
+!s100 f2_lTJ<7[hC=kWb=HHPdj2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Aarch_1
+R2
+R3
+R4
+R5
+DEx4 work 10 comparador 0 22 W5Gl0GYV7HkAk_Vo_i?U60
+l23
+L21
+V;b<`FEXaV7kzF@3B4?SJd2
+!s100 Cb[BSCEmgoIljC=GnAbMk0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Econtador
+R1
+R2
+R3
+R4
+R5
+R0
+Z19 8contador.vhd
+Z20 Fcontador.vhd
+l0
+L13
+VBJHFAZA9OzgK?RB<FAjH71
+!s100 kVoOB?X>nOK`EkKFzmRVW2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 8 contador 0 22 BJHFAZA9OzgK?RB<FAjH71
+l26
+L22
+Vel<Vl[=>M3]@[Q1UmhbST0
+!s100 dTEJLE`HfT2mZ2Z6LOc^;1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Emaquinaestados
+Z21 w1615940040
+R2
+R3
+R4
+R5
+R0
+Z22 8maquinaEstados.vhd
+Z23 FmaquinaEstados.vhd
+l0
+L13
+VNf`SWga0;^FRnJUX4il453
+!s100 =]^fWDE;KGIc^W?Jazzj?0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 14 maquinaestados 0 22 Nf`SWga0;^FRnJUX4il453
+l64
+L27
+VVI=C9?Voj^Ne8Q@d?3b?82
+!s100 SBGQU1L;TCSk2z>C]XHol2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Emultiplexador
+Z24 w1615933864
+R2
+R3
+R4
+R5
+R0
+Z25 8multiplexador.vhd
+Z26 Fmultiplexador.vhd
+l0
+L13
+V<:j2:XgO>TfKLObU1@NF50
+!s100 [fneRgf=eVAfV622H@XW;1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Aarch_1
+R2
+R3
+R4
+R5
+DEx4 work 13 multiplexador 0 22 <:j2:XgO>TfKLObU1@NF50
+l24
+L22
+V;4CaVoSabYUN1^8B3?fSB2
+!s100 ;b?iD8o^I=A1>n58WoLc71
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Eram
+Z27 w1615934562
+Z28 DPx9 altera_mf 20 altera_mf_components 0 22 Sn8Ol<dGSW99iM6NfOU>g1
+R4
+R5
+R0
+Z29 8RAM.vhd
+Z30 FRAM.vhd
+l0
+L42
+V0ET6?e:ibVI4`2D_U9n`A0
+!s100 bS>miO;FFgBIlLSjVOe[:1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Asyn
+R28
+R4
+R5
+DEx4 work 3 ram 0 22 0ET6?e:ibVI4`2D_U9n`A0
+l61
+L57
+V91FGO;8Y?c0Aa>;GiMO>]2
+!s100 NgZl6;30l?9S?1N[4X_`E1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Eregistrador1bit
+R1
+R4
+R5
+R0
+Z31 8registrador1bit.vhd
+Z32 Fregistrador1bit.vhd
+l0
+L11
+VZEecU8dDNGNn]GFA>b:^O0
+!s100 0j]h60[A<^T9PZ`<kG^ei0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Aarch1
+R4
+R5
+DEx4 work 15 registrador1bit 0 22 ZEecU8dDNGNn]GFA>b:^O0
+l23
+L19
+V4mQS=GFHNo06R930=j^;A2
+!s100 b=KK`=UoBI_=@VGe5[dZn3
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Eregistrador8bit
+R1
+R4
+R5
+R0
+Z33 8registrador8bit.vhd
+Z34 Fregistrador8bit.vhd
+l0
+L11
+VFjh7bZ3?_[z0k<ziH;GMh3
+!s100 OWEP^B]gjBU2WTU4hJ:6m1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Aarch1
+R4
+R5
+DEx4 work 15 registrador8bit 0 22 Fjh7bZ3?_[z0k<ziH;GMh3
+l24
+L20
+V[X8d=XZb]m^@lW6oZ@I:V1
+!s100 z3CON_:`EiXBHVR8?S1JW3
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Erom
+Z35 w1615934447
+R28
+R4
+R5
+R0
+Z36 8ROM.vhd
+Z37 FROM.vhd
+l0
+L42
+V=K?>TIZA2m?W9;o`5gE>f2
+!s100 2YY@SS7C5P82GoMTkgMIJ2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Asyn
+R28
+R4
+R5
+DEx4 work 3 rom 0 22 =K?>TIZA2m?W9;o`5gE>f2
+l59
+L55
+V@Nz4iR[SIJe3e7FZoiO900
+!s100 z?Y?k>O<=g3[j:G6b:?B<3
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Etb_rom
+Z38 w1615941374
+Z39 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R4
+R5
+R0
+Z40 8tb_rom.vhd
+Z41 Ftb_rom.vhd
+l0
+L8
 V1lCkgj0m[TMG]BOJKJAcF1
 !s100 Q?hYmfL4aKZJ@nlM50]RP2
-R11
+R8
 32
-R12
+R9
 !i10b 1
-R13
-R14
-R17
+R10
+R11
+R12
 !i113 1
-R15
+R13
 Aarch
+R39
+R4
 R5
-R6
-R7
-Z36 DEx4 work 6 tb_rom 0 22 1lCkgj0m[TMG]BOJKJAcF1
-!i122 0
+DEx4 work 6 tb_rom 0 22 1lCkgj0m[TMG]BOJKJAcF1
 l35
-L11 66
-Z37 V@d8gJf7XKKEGTj<5@bWE13
-Z38 !s100 `Z6XMz<V7SndWWn3?k=6O3
-R11
+L11
+V?f[Zc_d_21BcHO<d42`:U3
+!s100 ;2nozjYP8ilNPLX2d^]B71
+R8
 32
-R12
+R9
 !i10b 1
-R13
-R14
-R17
+R10
+R11
+R12
 !i113 1
-R15
+R13
+Etop_entity
+Z42 w1615941560
+R2
+R3
+R4
+R5
+R0
+Z43 8top_entity.vhd
+Z44 Ftop_entity.vhd
+l0
+L13
+V:5AQM[hcz[:foY@feen8V0
+!s100 B;DK8I`[Qh?VSj4JU_>3g2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 10 top_entity 0 22 :5AQM[hcz[:foY@feen8V0
+l93
+L22
+VJl5Ih]D0JSKZ2T?ER>XH91
+!s100 >5KaY`jVnNLSFg7A5<_b_1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+Etop_entity_tb
+Z45 w1615938902
+R39
+R4
+R5
+R0
+Z46 8C:/Users/User/Desktop/univali/TEE/binarizacaoSPP/top_entity_tb
+Z47 FC:/Users/User/Desktop/univali/TEE/binarizacaoSPP/top_entity_tb
+l0
+L9
+VRH7M?OZAkAPFUCN=jSS^M3
+!s100 aHfo=?`6zQ<11gZX<h_Yn3
+R8
+32
+Z48 !s110 1615941573
+!i10b 1
+Z49 !s108 1615941573.000000
+Z50 !s90 -reportprogress|300|C:/Users/User/Desktop/univali/TEE/binarizacaoSPP/top_entity_tb|
+Z51 !s107 C:/Users/User/Desktop/univali/TEE/binarizacaoSPP/top_entity_tb|
+!i113 1
+R13
+Aarch
+R39
+R4
+R5
+Z52 DEx4 work 13 top_entity_tb 0 22 RH7M?OZAkAPFUCN=jSS^M3
+l28
+L12
+Z53 VVaG6Rk=TB:U18gL:2SEzj0
+Z54 !s100 O45]DhbPPeZaciA5``;Y12
+R8
+32
+R48
+!i10b 1
+R49
+R50
+R51
+!i113 1
+R13

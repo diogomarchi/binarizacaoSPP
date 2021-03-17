@@ -10,7 +10,7 @@ end entity;
 
 architecture arch of tb_rom is
 
-component rom_template IS
+component rom IS
 	PORT
 	(
 		aclr		: IN STD_LOGIC  := '0';
@@ -35,7 +35,7 @@ end component;
 begin
 
     --Instantiate the Device Under Test (DUT)
-  DUT : rom_template
+  DUT : rom
   port map(
     aclr	=> w_clr,
     address	=> w_addr,

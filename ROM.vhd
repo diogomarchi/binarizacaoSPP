@@ -4,7 +4,7 @@
 -- MODULE: altsyncram 
 
 -- ============================================================
--- File Name: rom_template.vhd
+-- File Name: ROM.vhd
 -- Megafunction Name(s):
 -- 			altsyncram
 --
@@ -39,19 +39,20 @@ USE ieee.std_logic_1164.all;
 LIBRARY altera_mf;
 USE altera_mf.altera_mf_components.all;
 
-ENTITY rom_template IS
+ENTITY ROM IS
 	PORT
 	(
 		aclr		: IN STD_LOGIC  := '0';
-		address  : IN STD_LOGIC_VECTOR (11 DOWNTO 0);
+		address		: IN STD_LOGIC_VECTOR (11 DOWNTO 0);
 		clken		: IN STD_LOGIC  := '1';
 		clock		: IN STD_LOGIC  := '1';
+		rden		: IN STD_LOGIC  := '1';
 		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
-END rom_template;
+END ROM;
 
 
-ARCHITECTURE SYN OF rom_template IS
+ARCHITECTURE SYN OF rom IS
 
 	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (7 DOWNTO 0);
 
@@ -63,7 +64,7 @@ BEGIN
 		address_aclr_a => "CLEAR0",
 		clock_enable_input_a => "NORMAL",
 		clock_enable_output_a => "NORMAL",
-		init_file => "exemplo.mif",
+		init_file => "image.mif",
 		intended_device_family => "Cyclone IV E",
 		lpm_type => "altsyncram",
 		numwords_a => 4096,
@@ -79,6 +80,7 @@ BEGIN
 		address_a => address,
 		clock0 => clock,
 		clocken0 => clken,
+		rden_a => rden,
 		q_a => sub_wire0
 	);
 
@@ -106,22 +108,22 @@ END SYN;
 -- Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 -- Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 -- Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
--- Retrieval info: PRIVATE: MIFfilename STRING "exemplo.mif"
+-- Retrieval info: PRIVATE: MIFfilename STRING "image.mif"
 -- Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "4096"
 -- Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
 -- Retrieval info: PRIVATE: RegAddr NUMERIC "1"
 -- Retrieval info: PRIVATE: RegOutput NUMERIC "1"
--- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
+-- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "1"
 -- Retrieval info: PRIVATE: SingleClock NUMERIC "1"
 -- Retrieval info: PRIVATE: UseDQRAM NUMERIC "0"
 -- Retrieval info: PRIVATE: WidthAddr NUMERIC "12"
 -- Retrieval info: PRIVATE: WidthData NUMERIC "8"
--- Retrieval info: PRIVATE: rden NUMERIC "0"
+-- Retrieval info: PRIVATE: rden NUMERIC "1"
 -- Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 -- Retrieval info: CONSTANT: ADDRESS_ACLR_A STRING "CLEAR0"
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "NORMAL"
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "NORMAL"
--- Retrieval info: CONSTANT: INIT_FILE STRING "exemplo.mif"
+-- Retrieval info: CONSTANT: INIT_FILE STRING "image.mif"
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone IV E"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
 -- Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "4096"
@@ -136,14 +138,17 @@ END SYN;
 -- Retrieval info: USED_PORT: clken 0 0 0 0 INPUT VCC "clken"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT VCC "clock"
 -- Retrieval info: USED_PORT: q 0 0 8 0 OUTPUT NODEFVAL "q[7..0]"
+-- Retrieval info: USED_PORT: rden 0 0 0 0 INPUT VCC "rden"
 -- Retrieval info: CONNECT: @aclr0 0 0 0 0 aclr 0 0 0 0
 -- Retrieval info: CONNECT: @address_a 0 0 12 0 address 0 0 12 0
 -- Retrieval info: CONNECT: @clock0 0 0 0 0 clock 0 0 0 0
 -- Retrieval info: CONNECT: @clocken0 0 0 0 0 clken 0 0 0 0
+-- Retrieval info: CONNECT: @rden_a 0 0 0 0 rden 0 0 0 0
 -- Retrieval info: CONNECT: q 0 0 8 0 @q_a 0 0 8 0
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom_template.vhd TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom_template.inc FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom_template.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom_template.bsf FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL rom_template_inst.vhd FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ROM.vhd TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ROM.inc FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ROM.cmp TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ROM.bsf FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ROM_inst.vhd TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL ROM_syn.v TRUE
 -- Retrieval info: LIB_FILE: altera_mf

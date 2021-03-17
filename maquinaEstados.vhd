@@ -14,7 +14,8 @@ ENTITY maquinaEstados IS
   PORT (
     i_CLK          : IN std_logic; -- input clock
     i_CLR_n        : IN std_logic; -- input clear/reset
-	 i_CONTINUE     : IN std_logic; --input addres
+	 i_GO           : in std_logic; -- go 
+	 i_CONTINUE_n   : IN std_logic; --input addres
 	 o_CLR_CONT     : out std_logic; --output clear
 	 o_READY        : OUT STD_LOGIC; -- output larger or less that 4096
 	 o_INC_CONT     : out std_logic; --output inc contador
@@ -71,14 +72,18 @@ BEGIN
     END IF;
   END PROCESS;
   
-  p_NEXT : PROCESS (r_STATE)
+  p_NEXT : PROCESS (r_STATE, i_GO, i_CONTINUE_n)
   BEGIN
     CASE (r_STATE) IS
       WHEN s_INIT =>
-        w_NEXT <= s_VERIFY_ADDR; --vai para o proximo passando clear em 1  
-
+		  if (i_GO = '1') then
+          w_NEXT <= s_VERIFY_ADDR; --vai para o proximo passando clear em 1  
+        else
+		    w_NEXT <= s_INIT;		  
+		  end if;
+		  
       WHEN s_VERIFY_ADDR =>
-        if(i_CONTINUE = '1') then
+        if(i_CONTINUE_n = '0') then
 		    w_NEXT <= s_LOAD;
 		  else 
 		    w_NEXT <= s_FINISH;
