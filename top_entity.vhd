@@ -38,7 +38,7 @@ ARCHITECTURE rtl OF top_entity IS
   );
   END component;
   
-  component maquinaEstados IS
+  component bloco_controle IS
   PORT (
     i_CLK          : IN std_logic; -- input clock
     i_CLR_n        : IN std_logic; -- input clear/reset
@@ -92,7 +92,7 @@ ARCHITECTURE rtl OF top_entity IS
   
 BEGIN
 
-  u_maquinaEstados : maquinaEstados port map(
+  u_bloco_controle : bloco_controle port map(
     i_CLK       => i_CLK,
     i_CLR_n     => i_CLR_n,
     i_CONTINUE_n=> w_o_BO_CONTINUE,

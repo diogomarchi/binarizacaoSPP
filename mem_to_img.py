@@ -33,3 +33,9 @@ with open("resultado.mem", "r") as mem:
     plt.imshow(img, 'gray')
     plt.show()
     
+    
+    
+    cv.imwrite("resultado.png", img*255)
+    
+    
+    
