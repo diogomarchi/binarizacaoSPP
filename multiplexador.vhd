@@ -2,8 +2,8 @@
 -- Design: multiplexador 2x1
 -- Entity: multiplexador
 -- Author: Diogo & George
--- Rev.  : 1.0
--- Date  : 03/16/2021
+-- Rev. : 1.0
+-- Date : 03/16/2021
 ------------------------------------------------
 
 LIBRARY ieee;
@@ -12,15 +12,29 @@ USE ieee.STD_LOGIC_UNSIGNED.ALL;
 
 ENTITY multiplexador IS
   PORT (
+<<<<<<< HEAD
     i_SEL : IN  STD_LOGIC;                     -- selector
     i_A   : IN  STD_LOGIC_VECTOR(7 DOWNTO 0);  -- data A
     i_B   : IN  STD_LOGIC_VECTOR(7 DOWNTO 0);  -- data B
     o_Q   : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)); -- data output
+=======
+    i_SEL : IN std_logic; -- selector
+    i_A : IN std_logic_Vector(7 DOWNTO 0); -- data A
+    i_B : IN std_logic_Vector(7 DOWNTO 0); -- data B
+  o_Q : OUT std_logic_Vector(7 DOWNTO 0)); -- data output
+>>>>>>> ef1f14d774c95c6c2a34c511c0db054f8890660d
 END multiplexador;
 ARCHITECTURE arch_1 OF multiplexador IS
 
 BEGIN
+<<<<<<< HEAD
 
   o_Q <= i_A WHEN (i_SEL = '0') ELSE i_B;
 
 END arch_1;
+=======
+  o_Q <= i_A WHEN (i_SEL = '0') ELSE
+         i_B;
+
+END arch_1;
+>>>>>>> ef1f14d774c95c6c2a34c511c0db054f8890660d

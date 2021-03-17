@@ -1,6 +1,6 @@
--- Copyright (C) 2017  Intel Corporation. All rights reserved.
+-- Copyright (C) 2020  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and its AMPP partner logic 
+-- and other software and tools, and any partner logic 
 -- functions, and any output files from any of the foregoing 
 -- (including device programming or simulation files), and any 
 -- associated documentation or information are expressly subject 
@@ -10,13 +10,18 @@
 -- agreement, including, without limitation, that your use is for
 -- the sole purpose of programming logic devices manufactured by
 -- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details.
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
 
 -- VENDOR "Altera"
 -- PROGRAM "Quartus Prime"
--- VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
+-- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
+<<<<<<< HEAD
 -- DATE "03/17/2021 11:12:58"
+=======
+-- DATE "03/17/2021 10:44:59"
+>>>>>>> ef1f14d774c95c6c2a34c511c0db054f8890660d
 
 -- 
 -- Device: Altera EP4CE6E22C6 Package TQFP144
