@@ -11,16 +11,16 @@ USE ieee.std_logic_1164.ALL;
 USE ieee.STD_LOGIC_UNSIGNED.ALL;
 
 ENTITY multiplexador IS
-	PORT (
-		i_SEL : IN std_logic; -- selector
-		i_A : IN std_logic_Vector(7 DOWNTO 0); -- data A
-		i_B : IN std_logic_Vector(7 DOWNTO 0); -- data B
-	o_Q : OUT std_logic_Vector(7 DOWNTO 0)); -- data output
+  PORT (
+    i_SEL : IN std_logic; -- selector
+    i_A : IN std_logic_Vector(7 DOWNTO 0); -- data A
+    i_B : IN std_logic_Vector(7 DOWNTO 0); -- data B
+  o_Q : OUT std_logic_Vector(7 DOWNTO 0)); -- data output
 END multiplexador;
 ARCHITECTURE arch_1 OF multiplexador IS
 
 BEGIN
-	o_Q <= i_A WHEN (i_SEL = '0') ELSE
-	       i_B;
- 
+  o_Q <= i_A WHEN (i_SEL = '0') ELSE
+         i_B;
+
 END arch_1;
