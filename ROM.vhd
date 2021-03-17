@@ -16,8 +16,6 @@
 --
 -- 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 -- ************************************************************
-
-
 --Copyright (C) 2017  Intel Corporation. All rights reserved.
 --Your use of Intel Corporation's design tools, logic functions 
 --and other software and tools, and its AMPP partner logic 
@@ -31,60 +29,53 @@
 --the sole purpose of programming logic devices manufactured by
 --Intel and sold by Intel or its authorized distributors.  Please
 --refer to the applicable agreement for further details.
-
-
 LIBRARY ieee;
-USE ieee.std_logic_1164.all;
+USE ieee.std_logic_1164.ALL;
 
 LIBRARY altera_mf;
-USE altera_mf.altera_mf_components.all;
+USE altera_mf.altera_mf_components.ALL;
 
 ENTITY ROM IS
-	PORT
-	(
-		aclr		: IN STD_LOGIC  := '0';
-		address		: IN STD_LOGIC_VECTOR (11 DOWNTO 0);
-		clken		: IN STD_LOGIC  := '1';
-		clock		: IN STD_LOGIC  := '1';
-		rden		: IN STD_LOGIC  := '1';
-		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
-	);
+  PORT (
+    aclr    : IN  STD_LOGIC := '0';
+    address : IN  STD_LOGIC_VECTOR (11 DOWNTO 0);
+    clken   : IN  STD_LOGIC := '1';
+    clock   : IN  STD_LOGIC := '1';
+    rden    : IN  STD_LOGIC := '1';
+    q       : OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+  );
 END ROM;
-
-
 ARCHITECTURE SYN OF rom IS
 
-	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (7 DOWNTO 0);
+  SIGNAL sub_wire0 : STD_LOGIC_VECTOR (7 DOWNTO 0);
 
 BEGIN
-	q    <= sub_wire0(7 DOWNTO 0);
+  q <= sub_wire0(7 DOWNTO 0);
 
-	altsyncram_component : altsyncram
-	GENERIC MAP (
-		address_aclr_a => "CLEAR0",
-		clock_enable_input_a => "NORMAL",
-		clock_enable_output_a => "NORMAL",
-		init_file => "image.mif",
-		intended_device_family => "Cyclone IV E",
-		lpm_type => "altsyncram",
-		numwords_a => 4096,
-		operation_mode => "ROM",
-		outdata_aclr_a => "CLEAR0",
-		outdata_reg_a => "CLOCK0",
-		widthad_a => 12,
-		width_a => 8,
-		width_byteena_a => 1
-	)
-	PORT MAP (
-		aclr0 => aclr,
-		address_a => address,
-		clock0 => clock,
-		clocken0 => clken,
-		rden_a => rden,
-		q_a => sub_wire0
-	);
-
-
+  altsyncram_component : altsyncram
+  GENERIC MAP(
+    address_aclr_a         => "CLEAR0",
+    clock_enable_input_a   => "NORMAL",
+    clock_enable_output_a  => "NORMAL",
+    init_file              => "image.mif",
+    intended_device_family => "Cyclone IV E",
+    lpm_type               => "altsyncram",
+    numwords_a             => 4096,
+    operation_mode         => "ROM",
+    outdata_aclr_a         => "CLEAR0",
+    outdata_reg_a          => "CLOCK0",
+    widthad_a              => 12,
+    width_a                => 8,
+    width_byteena_a        => 1
+  )
+  PORT MAP(
+    aclr0     => aclr,
+    address_a => address,
+    clock0    => clock,
+    clocken0  => clken,
+    rden_a    => rden,
+    q_a       => sub_wire0
+  );
 
 END SYN;
 

@@ -10,15 +10,15 @@ USE ieee.std_logic_1164.ALL;
 
 ENTITY registrador1bit IS
   PORT (
-    i_CLK   : IN std_logic;
-    i_CLR_N : IN std_logic;
-    i_A     : IN std_logic; -- data input       
-    o_Q     : OUT std_logic); -- data output
+    i_CLK   : IN  STD_LOGIC;
+    i_CLR_N : IN  STD_LOGIC;
+    i_A     : IN  STD_LOGIC;  -- data input       
+    o_Q     : OUT STD_LOGIC); -- data output
 END registrador1bit;
 
 ARCHITECTURE arch1 OF registrador1bit IS
 
-  SIGNAL saida: std_logic;
+  SIGNAL saida : STD_LOGIC;
 
 BEGIN
 
@@ -27,7 +27,7 @@ BEGIN
     IF (i_CLR_N = '0') THEN
       saida <= '0';
     ELSIF (rising_edge(i_CLK)) THEN
-        saida <= i_A;
+      saida <= i_A;
     END IF;
   END PROCESS;
 

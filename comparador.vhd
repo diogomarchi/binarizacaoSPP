@@ -6,22 +6,20 @@
 -- Date  : 03/15/2021
 ------------------------------------------------
 
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.STD_LOGIC_UNSIGNED.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.STD_LOGIC_UNSIGNED.ALL;
 
-entity comparador is
-port ( 
-  i_VALOR : in  std_logic_vector(7 downto 0);  -- selector	 
-  o_Q     : out  std_logic -- data output
-); 
-end comparador;
+ENTITY comparador IS
+  PORT (
+    i_VALOR : IN  STD_LOGIC_VECTOR(7 DOWNTO 0); -- selector	 
+    o_Q     : OUT STD_LOGIC                     -- data output
+  );
+END comparador;
+ARCHITECTURE arch_1 OF comparador IS
 
-
-architecture arch_1 of comparador is
-
-begin
+BEGIN
   -- SAIDA
-  o_Q <= '1' when (i_VALOR > "10000000") else '0';			
-  
-end arch_1;
+  o_Q <= '1' WHEN (i_VALOR > "10000000") ELSE '0';
+
+END arch_1;
