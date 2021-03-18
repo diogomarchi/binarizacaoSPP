@@ -12,17 +12,10 @@ USE ieee.STD_LOGIC_UNSIGNED.ALL;
 
 ENTITY contador IS
   PORT (
-<<<<<<< HEAD
     i_CLR  : IN  STD_LOGIC;                    -- clear/reset
     i_CLK  : IN  STD_LOGIC;                    -- clock
     i_ENA  : IN  STD_LOGIC;                    -- enable 		 
     o_CONT : OUT STD_LOGIC_VECTOR(12 DOWNTO 0) -- data output
-=======
-    i_CLR : IN std_logic; -- clear/reset
-    i_CLK : IN std_logic; -- clock
-    i_ENA : IN std_logic; -- enable
-    o_CONT : OUT std_logic_vector(12 DOWNTO 0) -- data output
->>>>>>> ef1f14d774c95c6c2a34c511c0db054f8890660d
   );
 END contador;
 

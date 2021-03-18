@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/User/Desktop/univali/TEE/binarizacaoSPP
 Ebloco_controle
-Z1 w1615984806
+Z1 w1616067547
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
@@ -20,13 +20,13 @@ Z6 8bloco_controle.vhd
 Z7 Fbloco_controle.vhd
 l0
 L13
-VJ2bH><APi@Vj[E[2:O[];3
-!s100 WTHk;3[c>4RVKUZkBE8Hg0
+VQBjg9Lm5KV9WcRoCgkU3o0
+!s100 n`7PbaHR3b5`DeF^^EYD[0
 Z8 OV;C;10.5b;63
 32
-Z9 !s110 1615991599
+Z9 !s110 1616068069
 !i10b 1
-Z10 !s108 1615991599.000000
+Z10 !s108 1616068069.000000
 Z11 !s90 -reportprogress|300|RAM.vhd|ROM.vhd|bloco_controle.vhd|bloco_operacional.vhd|comparador.vhd|contador.vhd|multiplexador.vhd|registrador1bit.vhd|registrador8bit.vhd|tb_rom.vhd|top_entity.vhd|
 Z12 !s107 top_entity.vhd|tb_rom.vhd|registrador8bit.vhd|registrador1bit.vhd|multiplexador.vhd|contador.vhd|comparador.vhd|bloco_operacional.vhd|bloco_controle.vhd|ROM.vhd|RAM.vhd|
 !i113 1
@@ -36,11 +36,11 @@ R2
 R3
 R4
 R5
-DEx4 work 14 bloco_controle 0 22 J2bH><APi@Vj[E[2:O[];3
-l64
+DEx4 work 14 bloco_controle 0 22 QBjg9Lm5KV9WcRoCgkU3o0
+l60
 L27
-V71oXmN9e4nS[7I1VQVn8a1
-!s100 GQMUimj[h`^@589k0W>4R2
+VH;2zjUDMZfC<B6oU0UPA81
+!s100 D;n_Q1C^L8P=WLW]EZIJ<3
 R8
 32
 R9
@@ -51,7 +51,7 @@ R12
 !i113 1
 R13
 Ebloco_operacional
-Z14 w1615940573
+Z14 w1616067348
 R2
 R3
 R4
@@ -61,8 +61,8 @@ Z15 8bloco_operacional.vhd
 Z16 Fbloco_operacional.vhd
 l0
 L13
-V1KlEd3PjAD6^ZiiB=@5lP3
-!s100 HnAM@SK73H6eg^SVbOm5d2
+VQd[7;OXfPXJeR<6hZLIai0
+!s100 ENL12^SO5Qh9T;<jCnN^^2
 R8
 32
 R9
@@ -77,11 +77,11 @@ R2
 R3
 R4
 R5
-DEx4 work 17 bloco_operacional 0 22 1KlEd3PjAD6^ZiiB=@5lP3
-l67
-L30
-V[TPJ>zFA2ZR;N4YzkNPj;0
-!s100 oczfBM@SE[8l0i`O?A^:i3
+DEx4 work 17 bloco_operacional 0 22 Qd[7;OXfPXJeR<6hZLIai0
+l70
+L31
+VDi=KbG2Y5Qi?cGb54g?3X0
+!s100 i;J4AF`ldoXWJM=ghCEk`1
 R8
 32
 R9
@@ -92,7 +92,7 @@ R12
 !i113 1
 R13
 Ecomparador
-Z17 w1615933193
+Z17 w1616067425
 R2
 R3
 R4
@@ -102,8 +102,8 @@ Z18 8comparador.vhd
 Z19 Fcomparador.vhd
 l0
 L13
-VW5Gl0GYV7HkAk_Vo_i?U60
-!s100 f2_lTJ<7[hC=kWb=HHPdj2
+VQiEaSW=H4LoB8k4?HIW`B0
+!s100 gYbP5^l62BkBU@S6JoBW:0
 R8
 32
 R9
@@ -118,11 +118,11 @@ R2
 R3
 R4
 R5
-DEx4 work 10 comparador 0 22 W5Gl0GYV7HkAk_Vo_i?U60
-l23
-L21
-V;b<`FEXaV7kzF@3B4?SJd2
-!s100 Cb[BSCEmgoIljC=GnAbMk0
+DEx4 work 10 comparador 0 22 QiEaSW=H4LoB8k4?HIW`B0
+l21
+L19
+VVz5fFhZ[d=cHJ9DHj`1B61
+!s100 NE``=@W2Yg`SAK5MnVWCC0
 R8
 32
 R9
@@ -133,18 +133,18 @@ R12
 !i113 1
 R13
 Econtador
-R17
+Z20 w1616067666
 R2
 R3
 R4
 R5
 R0
-Z20 8contador.vhd
-Z21 Fcontador.vhd
+Z21 8contador.vhd
+Z22 Fcontador.vhd
 l0
 L13
-VBJHFAZA9OzgK?RB<FAjH71
-!s100 kVoOB?X>nOK`EkKFzmRVW2
+VfiQCG81?mNY_fJlaS=8WG2
+!s100 eB@2cTXocMZcA;Y?^zJOg1
 R8
 32
 R9
@@ -159,11 +159,11 @@ R2
 R3
 R4
 R5
-DEx4 work 8 contador 0 22 BJHFAZA9OzgK?RB<FAjH71
+DEx4 work 8 contador 0 22 fiQCG81?mNY_fJlaS=8WG2
 l26
 L22
-Vel<Vl[=>M3]@[Q1UmhbST0
-!s100 dTEJLE`HfT2mZ2Z6LOc^;1
+Vk<[W0I8chXooC9YD0SXXM2
+!s100 4cUj=JIN?V_h2HLOT5C9N2
 R8
 32
 R9
@@ -174,18 +174,18 @@ R12
 !i113 1
 R13
 Emultiplexador
-Z22 w1615933864
+Z23 w1616067377
 R2
 R3
 R4
 R5
 R0
-Z23 8multiplexador.vhd
-Z24 Fmultiplexador.vhd
+Z24 8multiplexador.vhd
+Z25 Fmultiplexador.vhd
 l0
 L13
-V<:j2:XgO>TfKLObU1@NF50
-!s100 [fneRgf=eVAfV622H@XW;1
+V9lE<BnhCZ_aMc8bJ[_BTc0
+!s100 kEnHbi_g_k67laiV?ldig0
 R8
 32
 R9
@@ -200,11 +200,11 @@ R2
 R3
 R4
 R5
-DEx4 work 13 multiplexador 0 22 <:j2:XgO>TfKLObU1@NF50
-l24
-L22
-V;4CaVoSabYUN1^8B3?fSB2
-!s100 ;b?iD8o^I=A1>n58WoLc71
+DEx4 work 13 multiplexador 0 22 9lE<BnhCZ_aMc8bJ[_BTc0
+l22
+L20
+V0:ISz4JPh7E58:2RhFY@20
+!s100 G1of<5HJT:1fVom^Kg1l=3
 R8
 32
 R9
@@ -215,17 +215,17 @@ R12
 !i113 1
 R13
 Eram
-Z25 w1615934562
-Z26 DPx9 altera_mf 20 altera_mf_components 0 22 Sn8Ol<dGSW99iM6NfOU>g1
+Z26 w1616022395
+Z27 DPx9 altera_mf 20 altera_mf_components 0 22 Sn8Ol<dGSW99iM6NfOU>g1
 R4
 R5
 R0
-Z27 8RAM.vhd
-Z28 FRAM.vhd
+Z28 8RAM.vhd
+Z29 FRAM.vhd
 l0
-L42
-V0ET6?e:ibVI4`2D_U9n`A0
-!s100 bS>miO;FFgBIlLSjVOe[:1
+L38
+V[9>baLdOJK9N1X]05EfD41
+!s100 YAOfb3dTa6o:U2Gc173;=0
 R8
 32
 R9
@@ -236,14 +236,14 @@ R12
 !i113 1
 R13
 Asyn
-R26
+R27
 R4
 R5
-DEx4 work 3 ram 0 22 0ET6?e:ibVI4`2D_U9n`A0
-l61
-L57
-V91FGO;8Y?c0Aa>;GiMO>]2
-!s100 NgZl6;30l?9S?1N[4X_`E1
+DEx4 work 3 ram 0 22 [9>baLdOJK9N1X]05EfD41
+l54
+L50
+VTS_a66^mWBB?Y@28KGn0e2
+!s100 `dFFiGkA3]6`hSmoUahU?0
 R8
 32
 R9
@@ -254,16 +254,16 @@ R12
 !i113 1
 R13
 Eregistrador1bit
-R17
+Z30 w1616067402
 R4
 R5
 R0
-Z29 8registrador1bit.vhd
-Z30 Fregistrador1bit.vhd
+Z31 8registrador1bit.vhd
+Z32 Fregistrador1bit.vhd
 l0
 L11
-VZEecU8dDNGNn]GFA>b:^O0
-!s100 0j]h60[A<^T9PZ`<kG^ei0
+V<BDVK`^`61>7QPOZ:iiSR0
+!s100 LNeQ_I_@DD^>a=bL0fL3R1
 R8
 32
 R9
@@ -276,11 +276,11 @@ R13
 Aarch1
 R4
 R5
-DEx4 work 15 registrador1bit 0 22 ZEecU8dDNGNn]GFA>b:^O0
+DEx4 work 15 registrador1bit 0 22 <BDVK`^`61>7QPOZ:iiSR0
 l23
 L19
-V4mQS=GFHNo06R930=j^;A2
-!s100 b=KK`=UoBI_=@VGe5[dZn3
+VJBAY9^SWeJ;IJ_AC:f]Pc3
+!s100 f]4f73^E1;H4Glc0=iDV52
 R8
 32
 R9
@@ -291,16 +291,16 @@ R12
 !i113 1
 R13
 Eregistrador8bit
-R17
+Z33 w1616067689
 R4
 R5
 R0
-Z31 8registrador8bit.vhd
-Z32 Fregistrador8bit.vhd
+Z34 8registrador8bit.vhd
+Z35 Fregistrador8bit.vhd
 l0
 L11
-VFjh7bZ3?_[z0k<ziH;GMh3
-!s100 OWEP^B]gjBU2WTU4hJ:6m1
+VM6hAde>Ef:LgJ;4Xf1i4?2
+!s100 G?z[DfNzQ4IDZ4GHkjLmf0
 R8
 32
 R9
@@ -313,11 +313,11 @@ R13
 Aarch1
 R4
 R5
-DEx4 work 15 registrador8bit 0 22 Fjh7bZ3?_[z0k<ziH;GMh3
-l24
-L20
-V[X8d=XZb]m^@lW6oZ@I:V1
-!s100 z3CON_:`EiXBHVR8?S1JW3
+DEx4 work 15 registrador8bit 0 22 M6hAde>Ef:LgJ;4Xf1i4?2
+l26
+L21
+VLYoM]_kQWfV4>>UA4l0f>0
+!s100 h0B8Oib:^cG[^WYL9VnbK3
 R8
 32
 R9
@@ -328,17 +328,17 @@ R12
 !i113 1
 R13
 Erom
-Z33 w1615934447
-R26
+Z36 w1616022701
+R27
 R4
 R5
 R0
-Z34 8ROM.vhd
-Z35 FROM.vhd
+Z37 8ROM.vhd
+Z38 FROM.vhd
 l0
-L42
-V=K?>TIZA2m?W9;o`5gE>f2
-!s100 2YY@SS7C5P82GoMTkgMIJ2
+L38
+VO]8Y0kh>2U>`Y9BHINDd?2
+!s100 Dm:k7Pc>VW3L^6eEN>C[n2
 R8
 32
 R9
@@ -349,14 +349,14 @@ R12
 !i113 1
 R13
 Asyn
-R26
+R27
 R4
 R5
-DEx4 work 3 rom 0 22 =K?>TIZA2m?W9;o`5gE>f2
-l59
-L55
-V@Nz4iR[SIJe3e7FZoiO900
-!s100 z?Y?k>O<=g3[j:G6b:?B<3
+DEx4 work 3 rom 0 22 O]8Y0kh>2U>`Y9BHINDd?2
+l52
+L48
+VUe[e4iim]4@LWYn@zE0A13
+!s100 ^Cn;Nlj:7H_g7WMZ48aP:3
 R8
 32
 R9
@@ -367,13 +367,13 @@ R12
 !i113 1
 R13
 Etb_rom
-Z36 w1615941374
-Z37 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z39 w1615941374
+Z40 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R4
 R5
 R0
-Z38 8tb_rom.vhd
-Z39 Ftb_rom.vhd
+Z41 8tb_rom.vhd
+Z42 Ftb_rom.vhd
 l0
 L8
 V1lCkgj0m[TMG]BOJKJAcF1
@@ -388,7 +388,7 @@ R12
 !i113 1
 R13
 Aarch
-R37
+R40
 R4
 R5
 DEx4 work 6 tb_rom 0 22 1lCkgj0m[TMG]BOJKJAcF1
@@ -406,18 +406,18 @@ R12
 !i113 1
 R13
 Etop_entity
-Z40 w1615984840
+Z43 w1616067631
 R2
 R3
 R4
 R5
 R0
-Z41 8top_entity.vhd
-Z42 Ftop_entity.vhd
+Z44 8top_entity.vhd
+Z45 Ftop_entity.vhd
 l0
 L13
-V:5AQM[hcz[:foY@feen8V0
-!s100 B;DK8I`[Qh?VSj4JU_>3g2
+V8KgMgVnR7jK;2?OB_jBLA0
+!s100 oNA0a5JkZ=aVo76lS>i4<2
 R8
 32
 R9
@@ -432,11 +432,11 @@ R2
 R3
 R4
 R5
-DEx4 work 10 top_entity 0 22 :5AQM[hcz[:foY@feen8V0
-l93
+DEx4 work 10 top_entity 0 22 8KgMgVnR7jK;2?OB_jBLA0
+l86
 L22
-VTiQNDIP58zC@VlG7Dz>I90
-!s100 `:@Z^ZHgCG_oQ<F3>Zi@50
+VOW2Ia<^hZ`;H_o9LR<cNO2
+!s100 dFoU`:UT?ImKW?d<l7MJ[3
 R8
 32
 R9
@@ -447,41 +447,41 @@ R12
 !i113 1
 R13
 Etop_entity_tb
-Z43 w1615938902
-R37
+Z46 w1615938902
+R40
 R4
 R5
 R0
-Z44 8top_entity_tb
-Z45 Ftop_entity_tb
+Z47 8C:/Users/User/Desktop/univali/TEE/binarizacaoSPP/top_entity_tb
+Z48 FC:/Users/User/Desktop/univali/TEE/binarizacaoSPP/top_entity_tb
 l0
 L9
 VRH7M?OZAkAPFUCN=jSS^M3
 !s100 aHfo=?`6zQ<11gZX<h_Yn3
 R8
 32
-Z46 !s110 1615991609
+Z49 !s110 1616068082
 !i10b 1
-Z47 !s108 1615991609.000000
-Z48 !s90 -reportprogress|300|top_entity_tb|
-Z49 !s107 top_entity_tb|
+Z50 !s108 1616068082.000000
+Z51 !s90 -reportprogress|300|C:/Users/User/Desktop/univali/TEE/binarizacaoSPP/top_entity_tb|
+Z52 !s107 C:/Users/User/Desktop/univali/TEE/binarizacaoSPP/top_entity_tb|
 !i113 1
 R13
 Aarch
-R37
+R40
 R4
 R5
-Z50 DEx4 work 13 top_entity_tb 0 22 RH7M?OZAkAPFUCN=jSS^M3
+Z53 DEx4 work 13 top_entity_tb 0 22 RH7M?OZAkAPFUCN=jSS^M3
 l28
 L12
-Z51 VVaG6Rk=TB:U18gL:2SEzj0
-Z52 !s100 O45]DhbPPeZaciA5``;Y12
+Z54 VVaG6Rk=TB:U18gL:2SEzj0
+Z55 !s100 O45]DhbPPeZaciA5``;Y12
 R8
 32
-R46
-!i10b 1
-R47
-R48
 R49
+!i10b 1
+R50
+R51
+R52
 !i113 1
 R13
